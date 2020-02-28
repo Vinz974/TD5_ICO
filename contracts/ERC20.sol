@@ -294,5 +294,9 @@ contract ERC20 is Context, IERC20 {
      *
      * To learn more about hooks, head to xref:ROOT:using-hooks.adoc[Using Hooks].
      */
-    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual {
+        if(from == address(0) && to != address(0)) _mint(to,amount);
+        if(from != address(0) && to == address(0)) _burn(from,amount);
+        if(from != address(0) && to != address(0)) _transfer(from, to, amount);
+     }
 }
