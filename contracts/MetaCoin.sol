@@ -12,8 +12,10 @@ contract MetaCoin {
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
+	event Approval(address indexed _owner, address indexed _spender, uint256 _value);
+
 	constructor() public {
-		balances[tx.origin] = 10000;
+		balances[msg.sender] = 10000;
 	}
 
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
@@ -32,7 +34,17 @@ contract MetaCoin {
 		return balances[addr];
 	}
 
-	function symbol() public view returns(string){
-		return "VN";
+	function totalSupply() public view returns (uint256){
+		return balances[msg.sender];
 	}
+
+	function transferFrom(address _from, address _to, uint256 _value) public returns (bool success){
+		if (balances[_from] < _value) return false;
+		balances[_from] -= _value;
+		balances[_to] += _value;
+		emit Transfer(_from, _to, _value);
+		return true;
+	}
+
+	function approve(address _spender, uint256 _value) public returns (bool success)
 }
