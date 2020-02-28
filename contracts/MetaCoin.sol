@@ -31,4 +31,8 @@ contract MetaCoin {
 	function getBalance(address addr) public view returns(uint) {
 		return balances[addr];
 	}
+
+	function symbol() public view returns(string){
+		return "VN";
+	}
 }
