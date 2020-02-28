@@ -18,7 +18,6 @@ contract MetaCoin {
 		balances[msg.sender] = 10000;
 	}
 
-	
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (balances[msg.sender] < amount) return false;
 		balances[msg.sender] -= amount;
@@ -47,7 +46,4 @@ contract MetaCoin {
 		return true;
 	}
 
-	function approve(address _spender, uint256 _value) public returns (bool success{
-		
-	}
 }
