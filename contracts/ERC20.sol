@@ -37,9 +37,9 @@ contract ERC20 is Context, IERC20 {
     mapping (address => mapping (address => uint256)) private _allowances;
 
     uint256 private _totalSupply;
-    string private _name;
-    string private _symbol;
-    uint8 private _decimals;
+    string private _name="Nyvi";
+    string private _symbol="NV";
+    uint8 private _decimals=18;
 
     /**
      * @dev Sets the values for `name`, `symbol`, and `decimals`. All three of
