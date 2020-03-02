@@ -6,18 +6,18 @@ module.exports = {
   // for more details on how to specify configuration options!
   //
   //networks: {
-  //  development: {
-  //    host: "127.0.0.1",
-  //    port: 7545,
-  //    network_id: "*"
-  //  },
-  //  test: {
-  //    host: "127.0.0.1",
-  //    port: 7545,
-  //    network_id: "*"
-  //  }
-  //}
-  //
+    //development: {
+      //host: "127.0.0.1",
+      //port: 7545,
+      //network_id: "*"
+    //},
+    //test: {
+      //host: "127.0.0.1",
+      //port: 7545,
+      //network_id: "*"
+    //}
+  //},
+
   compilers: {
     solc: {
       version: "0.6.0", // A version or constraint - Ex. "^0.5.0"
@@ -27,7 +27,7 @@ module.exports = {
       settings: {
         optimizer: {
           enabled: false,
-          runs: 10   // Optimize for how many times you intend to run the code
+          runs: 18   // Optimize for how many times you intend to run the code
         },
         evmVersion: "petersburg" // Default: "petersburg"
       }
