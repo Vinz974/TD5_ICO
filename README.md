@@ -1,2 +1,2 @@
 # TD5_ICO
-We create an ICO .
+We created an ICO.
