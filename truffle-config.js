@@ -27,7 +27,7 @@ module.exports = {
       settings: {
         optimizer: {
           enabled: false,
-          runs: 18   // Optimize for how many times you intend to run the code
+          runs: 100  // Optimize for how many times you intend to run the code
         },
         evmVersion: "petersburg" // Default: "petersburg"
       }
